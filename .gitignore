@@ -1,0 +1,4 @@
+# my ignore list
+__pycache__
+.venv
+.vscode
