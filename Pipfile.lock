@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0b7ee138efcb14ae03f5243f47fafe51763b45c626de9414c22a54580e42c30e"
+            "sha256": "13d0c2acb25161353477411c8c9177428638ac22f3b6b5e67b0ecd7ba443b326"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -109,6 +109,13 @@
             ],
             "index": "pypi",
             "version": "==2.3.2"
+        },
+        "flask-uploads": {
+            "hashes": [
+                "sha256:53ecbd6033667d50ae02b63adebbaa33c7fc56c09e5293025810cf9d841ecb02"
+            ],
+            "index": "pypi",
+            "version": "==0.2.1"
         },
         "flask-wtf": {
             "hashes": [
@@ -235,10 +242,10 @@
         },
         "python-engineio": {
             "hashes": [
-                "sha256:e4ac17c04c32ccca67287dfdbbe4ee1e9eec3a0a1a9a6070f3ab784db08407dd",
-                "sha256:ea4cf4ea0f19b65cedea83218e416a2c880c918ff91f64c604a034cd50110529"
+                "sha256:4c0861ba2c1a21ebe4a2b678ef059a70b35cbf92330475b7b06e79eab3186ea6",
+                "sha256:b7b5541e83e4e0aaf1b1bf79d090b2a85adb42800adc10599f017bb6c39b8dc3"
             ],
-            "version": "==3.3.0"
+            "version": "==3.3.1"
         },
         "python-socketio": {
             "hashes": [

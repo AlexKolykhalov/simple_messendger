@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content%}
+    {% if form %}
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <a href="{{ url_for('main.upload') }}"><img src="{{ form.url_avatar }} " width="128" height="128" alt="avatar"></a>
+                <br>
+                <br>
+                {{ wtf.quick_form(form) }}
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    {% endif %}
+{% endblock %}

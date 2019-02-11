@@ -3,7 +3,11 @@
         <tr>
             <td>                
                 <a style="display:block; text-decoration: none" href="{{ url_for('main.talk', id=user.id) }}">
-                    <img src="{{ url_for('static', filename='2.jpg') }}" class="img-circle" alt="dog" width="60" height="60">
+                    {% if user.url_photo == None %}
+                        <img src="{{ user.avatar(60) }}" class="img-circle" alt="user avatar" width="60" height="60">
+                    {% else %}
+                        <img src="{{ user.url_photo }}" class="img-circle" alt="user avatar" width="60" height="60">
+                    {% endif %}                    
                     <strong>&nbsp {{user.username}}</strong>
                 </a>                
             </td>        

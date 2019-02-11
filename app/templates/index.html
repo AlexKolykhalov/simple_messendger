@@ -2,11 +2,22 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}    
-    {% for user in users %}
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">{% include '_users.html' %}</div>
-            <div class="col-sm-4"></div>
-        </div>        
-    {% endfor %}   
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <a href="{{ url_for('main.profile', id=user.id) }}" style="display:block; text-decoration: none">
+                {% if user.url_photo == None %}
+                    <img src="{{ user.avatar(70) }}" class="img-circle" alt="Your avatar" width="70" height="70">
+                {% else %}
+                    <img src="{{ user.url_photo }}" class="img-circle" alt="Your avatar" width="70" height="70">
+                {% endif %}
+                {{ user.username }}
+            </a>
+            <br>                   
+            {% for user in users %}                
+                {% include '_users.html' %}
+            {% endfor %}
+        </div>
+        <div class="col-sm-4"></div> 
+    </div>           
 {% endblock %}

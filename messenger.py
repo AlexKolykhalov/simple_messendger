@@ -14,7 +14,7 @@ def test_connect():
 
 @socketio.on('disconnect', namespace='/test')
 def test_disconnect():
-    emit('response', {'data': 'disconnected', 'sender': current_user.username}, broadcast=True)
+    emit('response', {'data': 'Disconnected', 'sender': current_user.username}, broadcast=True)
     print('Client disconnected', request.sid)
 
 @socketio.on('message_send', namespace='/test')
