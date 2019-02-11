@@ -8,6 +8,7 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, close_room, ro
 app = create_app()
 socketio = SocketIO(app)
 
+
 @socketio.on('connect', namespace='/test')
 def test_connect():
     emit('response', {'data': 'Connected', 'sender': current_user.username}, broadcast=True)
